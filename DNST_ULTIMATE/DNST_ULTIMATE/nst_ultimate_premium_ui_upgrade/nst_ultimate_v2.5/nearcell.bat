@@ -1,0 +1,1 @@
+@echo off\ncd /d %~dp0\n\nTASKLIST /FI "IMAGENAME eq python.exe" | FIND /I "nst_gui.py" >nul\nif 0==0 (\n    echo NST Ultimate sudah berjalan.\n    exit\n)\n\npython nst_gui.py\n

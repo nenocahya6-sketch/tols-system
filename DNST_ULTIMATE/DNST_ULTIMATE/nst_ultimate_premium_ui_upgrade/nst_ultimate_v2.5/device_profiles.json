@@ -1,0 +1,968 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-05-22T02:10:22.991780",
+  "total_profiles": 12,
+  "profiles": {
+    "SM-G998B": {
+      "model": "SM-G998B",
+      "brand": "samsung",
+      "marketing_name": "Galaxy S21 Ultra",
+      "codename": "o1s",
+      "year": 2021,
+      "chipset": {
+        "name": "Exynos 2100",
+        "manufacturer": "Samsung",
+        "platform": "Exynos 2100",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Mali-G78 MP14",
+        "modem": "Exynos 5123",
+        "bootrom_protocol": "Samsung Download",
+        "edl_support": false,
+        "brom_support": false
+      },
+      "partitions": [
+        {
+          "name": "xbl",
+          "size_mb": 5.0,
+          "type": "raw",
+          "is_critical": false,
+          "is_dangerous": true,
+          "backup_recommended": true,
+          "description": "Boot ROM第一阶段"
+        },
+        {
+          "name": "abl",
+          "size_mb": 2.0,
+          "type": "raw",
+          "is_critical": false,
+          "is_dangerous": true,
+          "backup_recommended": true,
+          "description": "ABL bootloader"
+        },
+        {
+          "name": "boot",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": "Kernel + initramfs"
+        },
+        {
+          "name": "vbmeta",
+          "size_mb": 1.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": "Verified boot metadata"
+        },
+        {
+          "name": "recovery",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": "Recovery mode"
+        },
+        {
+          "name": "super",
+          "size_mb": 6000.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": "Logical partitions (dynamic)"
+        },
+        {
+          "name": "dtbo",
+          "size_mb": 16.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": "Device tree blob overlay"
+        }
+      ],
+      "total_partitions": 0,
+      "super_partition": true,
+      "auth": {
+        "type": "samsung_kg",
+        "required": true,
+        "description": "Samsung KG (Knowledge Guard) - OEM must be unlocked",
+        "unlock_method": "Settings > Developer Options > OEM Unlock",
+        "unlock_url": "https://developer.samsung.com/android-usb-driver",
+        "wait_period_days": 0
+      },
+      "test_points": [
+        {
+          "mode": "UART",
+          "location": "Test points near SIM slot",
+          "image_url": "",
+          "difficulty": "HARD",
+          "requires_soldering": true,
+          "notes": "Need to identify UART_RX and UART_TX"
+        }
+      ],
+      "key_combos": [
+        {
+          "mode": "Download",
+          "combination": "Vol Down + Power + Home",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Up + Power + Home",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": 7,
+      "rollback_possible": false,
+      "rollback_notes": "Exynos 2100 tidak bisa rollback firmware di bawah ARB v7",
+      "last_updated": "2026-05-22T02:10:22.991195",
+      "source": "samfw"
+    },
+    "SM-G998U": {
+      "model": "SM-G998U",
+      "brand": "samsung",
+      "marketing_name": "Galaxy S21 Ultra",
+      "codename": "o1s",
+      "year": 2021,
+      "chipset": {
+        "name": "Snapdragon 888",
+        "manufacturer": "Qualcomm",
+        "platform": "SM8350",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Adreno 660",
+        "modem": "Snapdragon X60",
+        "bootrom_protocol": "Qualcomm Sahara / EDL",
+        "edl_support": true,
+        "brom_support": false
+      },
+      "partitions": [],
+      "total_partitions": 0,
+      "super_partition": false,
+      "auth": {
+        "type": "samsung_kg",
+        "required": true,
+        "description": "",
+        "unlock_method": "Settings > Developer Options > OEM Unlock",
+        "unlock_url": "",
+        "wait_period_days": 0
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Download",
+          "combination": "Vol Down + Power + Home",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": 5,
+      "rollback_possible": true,
+      "rollback_notes": "",
+      "last_updated": "2026-05-22T02:10:22.991267",
+      "source": "samfw"
+    },
+    "M2011K2G": {
+      "model": "M2011K2G",
+      "brand": "xiaomi",
+      "marketing_name": "Mi 11",
+      "codename": "venus",
+      "year": 2020,
+      "chipset": {
+        "name": "Snapdragon 888",
+        "manufacturer": "Qualcomm",
+        "platform": "SM8350",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Adreno 660",
+        "modem": "",
+        "bootrom_protocol": "Qualcomm Sahara / EDL",
+        "edl_support": true,
+        "brom_support": false
+      },
+      "partitions": [
+        {
+          "name": "xbl",
+          "size_mb": 5.0,
+          "type": "raw",
+          "is_critical": false,
+          "is_dangerous": true,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "abl",
+          "size_mb": 2.0,
+          "type": "raw",
+          "is_critical": false,
+          "is_dangerous": true,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "boot",
+          "size_mb": 96.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "vbmeta",
+          "size_mb": 1.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "recovery",
+          "size_mb": 96.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "super",
+          "size_mb": 6000.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "dtbo",
+          "size_mb": 16.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        }
+      ],
+      "total_partitions": 0,
+      "super_partition": true,
+      "auth": {
+        "type": "xiaomi_unlock",
+        "required": true,
+        "description": "Xiaomi Mi Unlock - butuh approval dari Xiaomi",
+        "unlock_method": "Mi Unlock Tool from en.miui.com/unlock/",
+        "unlock_url": "https://en.miui.com/unlock/",
+        "wait_period_days": 7
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Fastboot",
+          "combination": "Vol Down + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Up + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": true,
+      "rollback_notes": "",
+      "last_updated": "2026-05-22T02:10:22.991349",
+      "source": "xiaomifirmware"
+    },
+    "PIXEL 6": {
+      "model": "Pixel 6",
+      "brand": "google",
+      "marketing_name": "Pixel 6",
+      "codename": "oriole",
+      "year": 2021,
+      "chipset": {
+        "name": "Tensor",
+        "manufacturer": "Google",
+        "platform": "GS101",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Mali-G78 MP20",
+        "modem": "",
+        "bootrom_protocol": "EDL (limited)",
+        "edl_support": true,
+        "brom_support": false
+      },
+      "partitions": [
+        {
+          "name": "boot",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "vbmeta",
+          "size_mb": 1.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "recovery",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "super",
+          "size_mb": 5000.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "vendor_boot",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        }
+      ],
+      "total_partitions": 0,
+      "super_partition": true,
+      "auth": {
+        "type": "google_unlock",
+        "required": false,
+        "description": "Google bootloader unlock - free but wipes data",
+        "unlock_method": "fastboot flashing unlock",
+        "unlock_url": "",
+        "wait_period_days": 0
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Fastboot",
+          "combination": "Vol Down + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Down + Power (choose Recovery)",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": true,
+      "rollback_notes": "Pixel mudah di-unbrick, flash factory image via fastboot",
+      "last_updated": "2026-05-22T02:10:22.991414",
+      "source": "google"
+    },
+    "LE2123": {
+      "model": "LE2123",
+      "brand": "oneplus",
+      "marketing_name": "OnePlus 9 Pro",
+      "codename": "lemonade",
+      "year": 2021,
+      "chipset": {
+        "name": "Snapdragon 888",
+        "manufacturer": "Qualcomm",
+        "platform": "SM8350",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Adreno 660",
+        "modem": "",
+        "bootrom_protocol": "Qualcomm Sahara / EDL",
+        "edl_support": true,
+        "brom_support": false
+      },
+      "partitions": [
+        {
+          "name": "xbl",
+          "size_mb": 5.0,
+          "type": "raw",
+          "is_critical": false,
+          "is_dangerous": true,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "abl",
+          "size_mb": 2.0,
+          "type": "raw",
+          "is_critical": false,
+          "is_dangerous": true,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "boot",
+          "size_mb": 96.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "vbmeta",
+          "size_mb": 1.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "super",
+          "size_mb": 6000.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        }
+      ],
+      "total_partitions": 0,
+      "super_partition": true,
+      "auth": {
+        "type": "oneplus_unlock",
+        "required": false,
+        "description": "OnePlus bootloader unlock - free",
+        "unlock_method": "fastboot oem unlock",
+        "unlock_url": "",
+        "wait_period_days": 0
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Fastboot",
+          "combination": "Vol Down + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Up + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": true,
+      "rollback_notes": "",
+      "last_updated": "2026-05-22T02:10:22.991481",
+      "source": "oneplus"
+    },
+    "ELS-NX9": {
+      "model": "ELS-NX9",
+      "brand": "huawei",
+      "marketing_name": "P40 Pro",
+      "codename": "els",
+      "year": 2020,
+      "chipset": {
+        "name": "Kirin 990 5G",
+        "manufacturer": "HiSilicon",
+        "platform": "Kirin 990",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Mali-G76 MP16",
+        "modem": "Balong 5000",
+        "bootrom_protocol": "HiSilicon USB Download",
+        "edl_support": false,
+        "brom_support": true
+      },
+      "partitions": [
+        {
+          "name": "boot",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "recovery",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "system",
+          "size_mb": 3000.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "vendor",
+          "size_mb": 1000.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "product",
+          "size_mb": 2000.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "recovery_ramdisk",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        }
+      ],
+      "total_partitions": 0,
+      "super_partition": false,
+      "auth": {
+        "type": "huawei_bootloader_code",
+        "required": true,
+        "description": "Huawei requires bootloader code (no longer provided officially)",
+        "unlock_method": "Third-party unlock services",
+        "unlock_url": "",
+        "wait_period_days": 0
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Fastboot",
+          "combination": "Vol Down + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Up + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": false,
+      "rollback_notes": "Huawei tidak menyediakan firmware untuk flashing publik. Gunakan HiSuite.",
+      "last_updated": "2026-05-22T02:10:22.991537",
+      "source": "huawei"
+    },
+    "M2101K7AG": {
+      "model": "M2101K7AG",
+      "brand": "xiaomi",
+      "marketing_name": "Redmi Note 10",
+      "codename": "mojito",
+      "year": 2021,
+      "chipset": {
+        "name": "Snapdragon 678",
+        "manufacturer": "Qualcomm",
+        "platform": "SM6150",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Adreno 612",
+        "modem": "",
+        "bootrom_protocol": "Qualcomm Sahara / EDL",
+        "edl_support": true,
+        "brom_support": false
+      },
+      "partitions": [
+        {
+          "name": "boot",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "vbmeta",
+          "size_mb": 1.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "recovery",
+          "size_mb": 64.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "super",
+          "size_mb": 5000.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        }
+      ],
+      "total_partitions": 0,
+      "super_partition": true,
+      "auth": {
+        "type": "xiaomi_unlock",
+        "required": true,
+        "description": "",
+        "unlock_method": "",
+        "unlock_url": "",
+        "wait_period_days": 7
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Fastboot",
+          "combination": "Vol Down + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Up + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": true,
+      "rollback_notes": "",
+      "last_updated": "2026-05-22T02:10:22.991582",
+      "source": "xiaomifirmware"
+    },
+    "2201117TG": {
+      "model": "2201117TG",
+      "brand": "xiaomi",
+      "marketing_name": "Redmi Note 11",
+      "codename": "spes",
+      "year": 2021,
+      "chipset": {
+        "name": "Snapdragon 680",
+        "manufacturer": "Qualcomm",
+        "platform": "SM6225",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Adreno 610",
+        "modem": "",
+        "bootrom_protocol": "Qualcomm Sahara / EDL",
+        "edl_support": true,
+        "brom_support": false
+      },
+      "partitions": [
+        {
+          "name": "boot",
+          "size_mb": 96.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "vbmeta",
+          "size_mb": 1.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        },
+        {
+          "name": "super",
+          "size_mb": 6000.0,
+          "type": "raw",
+          "is_critical": true,
+          "is_dangerous": false,
+          "backup_recommended": true,
+          "description": ""
+        }
+      ],
+      "total_partitions": 0,
+      "super_partition": true,
+      "auth": {
+        "type": "xiaomi_unlock",
+        "required": true,
+        "description": "",
+        "unlock_method": "",
+        "unlock_url": "",
+        "wait_period_days": 7
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Fastboot",
+          "combination": "Vol Down + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": true,
+      "rollback_notes": "",
+      "last_updated": "2026-05-22T02:10:22.991631",
+      "source": "xiaomifirmware"
+    },
+    "SM-A525F": {
+      "model": "SM-A525F",
+      "brand": "samsung",
+      "marketing_name": "Galaxy A52",
+      "codename": "a52q",
+      "year": 2021,
+      "chipset": {
+        "name": "Snapdragon 720G",
+        "manufacturer": "Qualcomm",
+        "platform": "SM7125",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Adreno 618",
+        "modem": "",
+        "bootrom_protocol": "Qualcomm Sahara / EDL",
+        "edl_support": true,
+        "brom_support": false
+      },
+      "partitions": [],
+      "total_partitions": 0,
+      "super_partition": false,
+      "auth": {
+        "type": "samsung_kg",
+        "required": true,
+        "description": "",
+        "unlock_method": "",
+        "unlock_url": "",
+        "wait_period_days": 0
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Download",
+          "combination": "Vol Down + Power + Home",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Up + Power + Home",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": true,
+      "rollback_notes": "",
+      "last_updated": "2026-05-22T02:10:22.991675",
+      "source": "samfw"
+    },
+    "SM-A536B": {
+      "model": "SM-A536B",
+      "brand": "samsung",
+      "marketing_name": "Galaxy A53 5G",
+      "codename": "a53x",
+      "year": 2022,
+      "chipset": {
+        "name": "Exynos 1280",
+        "manufacturer": "Samsung",
+        "platform": "Exynos 1280",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Mali-G68",
+        "modem": "",
+        "bootrom_protocol": "Samsung Download",
+        "edl_support": false,
+        "brom_support": false
+      },
+      "partitions": [],
+      "total_partitions": 0,
+      "super_partition": false,
+      "auth": {
+        "type": "samsung_kg",
+        "required": true,
+        "description": "",
+        "unlock_method": "",
+        "unlock_url": "",
+        "wait_period_days": 0
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Download",
+          "combination": "Vol Down + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Up + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": true,
+      "rollback_notes": "",
+      "last_updated": "2026-05-22T02:10:22.991706",
+      "source": "samfw"
+    },
+    "NOH-NX9": {
+      "model": "NOH-NX9",
+      "brand": "huawei",
+      "marketing_name": "Mate 40 Pro",
+      "codename": "noh",
+      "year": 2020,
+      "chipset": {
+        "name": "Kirin 9000",
+        "manufacturer": "HiSilicon",
+        "platform": "Kirin 9000",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Mali-G78 MP24",
+        "modem": "",
+        "bootrom_protocol": "HiSilicon USB Download",
+        "edl_support": false,
+        "brom_support": true
+      },
+      "partitions": [],
+      "total_partitions": 0,
+      "super_partition": false,
+      "auth": {
+        "type": "huawei_bootloader_code",
+        "required": true,
+        "description": "",
+        "unlock_method": "",
+        "unlock_url": "",
+        "wait_period_days": 0
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "Fastboot",
+          "combination": "Vol Down + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Up + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": true,
+      "rollback_notes": "",
+      "last_updated": "2026-05-22T02:10:22.991739",
+      "source": "huawei"
+    },
+    "UNISOC-T606": {
+      "model": "Unisoc-T606",
+      "brand": "generic",
+      "marketing_name": "Generic Unisoc Device",
+      "codename": "unisoc_t606",
+      "year": 2022,
+      "chipset": {
+        "name": "T606",
+        "manufacturer": "Unisoc",
+        "platform": "Spreadtrum",
+        "arch": "ARMv8",
+        "cores": 8,
+        "gpu": "Mali-G57",
+        "modem": "",
+        "bootrom_protocol": "Unisoc FDL (Fast Download Loader)",
+        "edl_support": false,
+        "brom_support": true
+      },
+      "partitions": [],
+      "total_partitions": 0,
+      "super_partition": false,
+      "auth": {
+        "type": "none",
+        "required": false,
+        "description": "",
+        "unlock_method": "",
+        "unlock_url": "",
+        "wait_period_days": 0
+      },
+      "test_points": [],
+      "key_combos": [
+        {
+          "mode": "FDL",
+          "combination": "Vol Up + Vol Down + USB connect",
+          "duration_seconds": 10,
+          "notes": ""
+        },
+        {
+          "mode": "Recovery",
+          "combination": "Vol Up + Power",
+          "duration_seconds": 10,
+          "notes": ""
+        }
+      ],
+      "firmware_list": [],
+      "latest_firmware": "",
+      "max_arb_version": -1,
+      "rollback_possible": true,
+      "rollback_notes": "",
+      "last_updated": "2026-05-22T02:10:22.991771",
+      "source": "manual"
+    }
+  }
+}
